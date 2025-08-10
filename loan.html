@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<!--
+    Massively by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+  <title>Bank Loan Analysis & Dashboard</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript>
+    <link rel="stylesheet" href="assets/css/noscript.css" />
+  </noscript>
+</head>
+
+<body class="is-preload">
+  <!-- Wrapper -->
+  <div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+      <a href="index.html" class="logo">Portfolio</a>
+    </header>
+
+    <!-- Nav -->
+    <nav id="nav">
+      <ul class="links">
+        <li><a href="index.html">Projects</a></li>
+        <li class="active"><a href="bank-loan.html">Bank Loan Analysis</a></li>
+        <li><a href="about.html">About Me</a></li>
+      </ul>
+      <ul class="icons">
+        <li><a href="https://public.tableau.com/app/profile/taran.arora/vizzes" class="far fa-chart-bar" target="_blank"><span class="label" alt="Tableau"></span></a></li>
+        <li><a href="https://www.linkedin.com/in/taran--arora/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+        <li><a href="https://github.com/TaranArora/My-Portfolio" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+      </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+
+      <!-- Post -->
+      <section class="post">
+        <header class="major">
+          <h1>Bank Loan Analysis & Dashboard</h1>
+          <p>Interactive dashboards that evaluate portfolio health (good vs. bad loans), monitor lending KPIs over time, and reveal trends by region, borrower profile, and loan type to support data‑driven lending decisions.</p>
+        </header>
+
+        <!-- OPTIONAL: Hero image or dashboard screenshot
+        <div class="image main"><img src="images/bank-loan-hero.jpg" alt="Bank Loan Dashboard" /></div>
+        -->
+
+        <!-- ===================== EMBED AREA (Excel for Web) ===================== -->
+        <div class="image main" style="text-align:center">
+          <!-- Replace the src with a screenshot of your Excel dashboard -->
+          <img src="images/Loan.png" alt="Bank Loan Summary Dashboard Preview" />
+        </div>
+        <div class="image main" style="text-align:center">
+          <!-- Replace the src with a screenshot of your Excel dashboard -->
+          <img src="images/LoanOverview.png" alt="Bank Loan Overview Dashboard Preview" />
+        </div>
+
+        <!-- Optional: Embed Excel workbook via OneDrive/Excel for Web -->
+        <!--
+          1) Upload the workbook to OneDrive or SharePoint.
+          2) File > Share > Embed. Copy the iframe code and replace below.
+        -->
+        
+
+        <p></p>
+
+        <h2>Objective</h2>
+        <p>Build a comprehensive Bank Loan Reporting System to monitor loan performance, evaluate portfolio quality, and guide lending strategy using clear KPIs, segmentation, and trend analysis.</p>
+
+        <h2>Key Features &amp; Insights</h2>
+        <p><strong>Summary Dashboard</strong></p>
+        <ul>
+          <li>KPIs: <em>Total Loan Applications</em>, <em>Total Funded Amount</em>, <em>Total Amount Received</em>, <em>Average Interest Rate</em>, <em>Average DTI</em>.</li>
+          <li>Comparisons: Month‑to‑Date (MTD) and Month‑over‑Month (MoM) deltas.</li>
+          <li>Quality split: <strong>Good Loans</strong> (Fully Paid, Current) vs <strong>Bad Loans</strong> (Charged Off) with their own KPIs.</li>
+        </ul>
+
+        <p><strong>Overview Dashboard</strong></p>
+        <ul>
+          <li><strong>Monthly Trends</strong> (line): applications, funded, received over time.</li>
+          <li><strong>Regional Analysis</strong> (filled map): activity by state.</li>
+          <li><strong>Loan Term</strong> (donut): distribution by 36/60 months.</li>
+          <li><strong>Employment Length</strong> (bar): metrics by borrower job stability.</li>
+          <li><strong>Loan Purpose</strong> (bar): debt consolidation, credit card, etc.</li>
+          <li><strong>Home Ownership</strong> (treemap): own, rent, mortgage.</li>
+        </ul>
+
+
+        <h2>Data &amp; Model</h2>
+        <ul>
+          <li><strong>Borrower</strong>: state, annual income, employment length/title, home ownership, verification status.</li>
+          <li><strong>Loan</strong>: amount, term, interest rate, purpose, grade/sub‑grade, issue date.</li>
+          <li><strong>Performance</strong>: loan status, last/next payment dates, DTI, amounts funded/received.</li>
+        </ul>
+        
+        <div class="excel-embed" style="margin: 2rem 0;">
+  <!-- Use the full OneDrive embed URL from File > Share > Embed -->
+  <iframe
+    title="Bank Loan Dashboard (Excel)"
+    width="100%"
+    height="300"
+    frameborder="0"
+    scrolling="no"
+    src="https://1drv.ms/x/c/a2cba49479d148f3/IQQ1rUkMLkAoRbOKyTOemgjAAQRLdwgaXHJft7UR-Jf_Uuo?em=2&ActiveCell='financial_loan'!A1&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True">
+  </iframe>
+</div>
+        
+
+        <h2>Impact</h2>
+        <ul>
+          <li>Faster, data‑driven lending decisions via live KPIs.</li>
+          <li>Clear risk monitoring using Good vs Bad loan cohorts.</li>
+          <li>Targeted regional &amp; demographic strategies from trends and segments.</li>
+        </ul>
+
+        <h2>Potential Improvements</h2>
+        <ul>
+          <li><strong>Predictive default risk</strong> (classification model with borrower attributes).</li>
+          <li><strong>Automated refresh</strong> (scheduled queries to live data).</li>
+          <li><strong>Drill‑through</strong> to borrower records and payment history.</li>
+          <li><strong>Enhanced risk scoring</strong> (integrate bureau/alternative data).</li>
+        </ul>
+
+        <!-- Links / Actions -->
+        <ul class="actions special">
+          <li>
+            <a href="https://github.com/TaranArora/Bank-Loan-Analysis" class="button" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+          </li>
+          <!-- Optional: link to a PDF case study -->
+          <!-- <li><a href="docs/Bank-Loan-Case-Study.pdf" class="button" target="_blank">Download Case Study</a></li> -->
+        </ul>
+      </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <!-- Back to Home -->
+    <header id="header">
+      <a href="index.html" class="logo">Back to Home</a>
+    </header>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
