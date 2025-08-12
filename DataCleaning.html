@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<!--
+    Massively by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+  <title>Excel Data Cleaning</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+  <!-- Wrapper -->
+  <div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+      <a href="index.html" class="logo">Portfolio</a>
+    </header>
+
+    <!-- Nav -->
+    <nav id="nav">
+      <ul class="links">
+        <li><a href="index.html">Projects</a></li>
+        <li class="active"><a href="data-cleaning.html">Excel Data Cleaning</a></li>
+        <li><a href="about.html">About Me</a></li>
+      </ul>
+      <ul class="icons">
+        <li><a href="https://public.tableau.com/app/profile/taran.arora/vizzes" class="far fa-chart-bar" target="_blank"><span class="label" alt="Tableau"></span></a></li>
+        <li><a href="https://www.linkedin.com/in/taran--arora/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+        <li><a href="https://github.com/TaranArora/My-Portfolio" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+      </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+
+      <!-- Post -->
+      <section class="post">
+        <header class="major">
+          <h1>Excel Data Cleaning</h1>
+          <p>Turned a messy, inconsistent dataset into an analysis-ready table by standardizing categories, fixing dates, removing duplicates, and polishing text with Excel functions.</p>
+        </header>
+        <div><h2>Before</h2></div>
+
+        <div class="excel-embed" style="margin: 2rem 0;">
+          <iframe
+            title="Excel Data Cleaning (Embedded)"
+            width="100%"
+            height="250"
+            frameborder="0"
+            scrolling="no"
+            src="https://1drv.ms/x/c/a2cba49479d148f3/IQQ4vshWp-PBSah_tG0OG83BAR1YB7JQBgzilh2Y74yaTYw?em=2&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True">
+          </iframe>
+        </div>
+
+        <!-- OPTIONAL: Hero / preview images -->
+
+        <div><h2>After</h2></div>
+        <div class="excel-embed" style="margin: 2rem 0;">
+          <iframe
+            title="Excel Data Cleaning (Embedded)"
+            width="100%"
+            height="250"
+            frameborder="0"
+            scrolling="no"
+            src="https://1drv.ms/x/c/a2cba49479d148f3/IQSCoXPmak7aSraOL7zg1IqzATmc2LW95dY138NLyOGAtwU?em=2&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True">
+          </iframe>
+        </div>
+
+        <h2>Objective</h2>
+        <p>Clean, standardize, and structure a raw dataset so it is accurate, consistent, and ready for dashboards, reports, and analysis.</p>
+
+        <h2>Key Cleaning Steps</h2>
+        <ul>
+          <li><strong>Consolidated categories</strong> by spotting and correcting misspellings/variants (e.g., <em>Democractic</em> → <em>Democratic</em>), ensuring consistent groupings.</li>
+          <li><strong>Fixed date column</strong> by converting mixed or text dates to a single, valid date type and format (e.g., using <code>DATEVALUE</code>, <code>TEXT</code>, and custom formats).</li>
+          <li><strong>Removed duplicates</strong> using Excel’s <em>Remove Duplicates</em> to keep unique records.</li>
+          <li><strong>Trimmed extra spaces</strong> with <code>=TRIM(cell)</code> to remove leading/trailing/double spaces that break lookups and grouping.</li>
+          <li><strong>Standardized case</strong> with <code>=PROPER(cell)</code> for clean, readable names and categories.</li>
+        </ul>
+
+        <h2>Techniques &amp; Functions Used</h2>
+        <ul>
+          <li>Text cleanup: <code>TRIM</code>, <code>PROPER</code>, <code>SUBSTITUTE</code></li>
+          <li>Date normalization: <code>DATEVALUE</code>, <code>TEXT</code>, custom date formats</li>
+          <li>De-duplication: <em>Remove Duplicates</em></li>
+          <li>Validation &amp; control: Data Validation lists for categories</li>
+          <li>Quality checks: Filters, Conditional Formatting to spot remaining issues</li>
+        </ul>
+
+        <h2>Impact</h2>
+        <ul>
+          <li>Reliable, analysis-ready dataset free of spelling drift, text clutter, and duplicate rows.</li>
+          <li>Consistent dates for accurate time-series and grouping.</li>
+          <li>Faster downstream work—no rework or ad-hoc fixes needed during reporting.</li>
+        </ul>
+
+        <h2>Before &amp; After Gallery</h2>
+        <div class="row">
+          <div class="col-4 col-12-small">
+            <span class="image fit"><img src="images/consolidation error.png" alt="Before cleaning" /></span>
+          </div>
+          <div class="col-4 col-12-small">
+            <span class="image fit"><img src="images/consolidated.png" alt="After cleaning" /></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4 col-12-small">
+            <span class="image fit"><img src="images/date.png" alt="Before cleaning" /></span>
+          </div>
+          <div class="col-4 col-12-small">
+            <span class="image fit"><img src="images/date fixed.png" alt="After cleaning" /></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4 col-12-small">
+            <span class="image fit"><img src="images/Proper.png" alt="Before cleaning" /></span>
+</div>
+        <!-- Links / Actions -->
+        <ul class="actions special">
+          <li><a href="#" class="button" target="_blank" rel="noopener noreferrer">View on GitHub</a></li>
+        </ul>
+      </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer"></footer>
+
+    <!-- Back to Home -->
+    <header id="header">
+      <a href="index.html" class="logo">Back to Home</a>
+    </header>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
