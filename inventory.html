@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+  <title>Grocery Inventory Analysis & Dashboard</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+<div id="wrapper">
+
+  <!-- Header -->
+  <header id="header">
+    <a href="index.html" class="logo">Portfolio</a>
+  </header>
+
+  <!-- Nav -->
+  <nav id="nav">
+    <ul class="links">
+      <li><a href="index.html">Projects</a></li>
+      <li class="active"><a href="grocery-inventory.html">Inventory Analysis</a></li>
+      <li><a href="about.html">About Me</a></li>
+    </ul>
+    <ul class="icons">
+      <li><a href="https://public.tableau.com/app/profile/your.profile" class="far fa-chart-bar" target="_blank"><span class="label" alt="Tableau"></span></a></li>
+      <li><a href="https://www.linkedin.com/in/your-handle/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+      <li><a href="https://github.com/your-handle/your-repo" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+    </ul>
+  </nav>
+
+  <!-- Main -->
+  <div id="main">
+    <section class="post">
+      <header class="major">
+        <h1>Grocery Inventory Analysis & Dashboard</h1>
+        <p>Excel-based analysis that optimizes replenishment, quantify risk, and surface supplier performance using ABC, stock-risk, valuation, and reorder logic. Built on a Kaggle dataset and finished with an executive dashboard.</p>
+      </header>
+
+      <!-- Dashboard screenshots -->
+      <div class="image main" style="text-align:center">
+        <img src="images/Inventory Dashboard.png" alt="Inventory Summary Dashboard" />
+      </div>
+
+      <!-- Optional: Live Excel embed (replace src with your OneDrive embed URL) -->
+      <!--
+      <div class="excel-embed" style="margin: 2rem 0;">
+        <iframe
+          title="Grocery Inventory Dashboard (Excel)"
+          width="100%"
+          height="340"
+          frameborder="0"
+          scrolling="no"
+          src="PASTE_YOUR_EXCEL_ONEDRIVE_EMBED_URL_HERE&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True">
+        </iframe>
+      </div>
+      -->
+
+      <h2>Objective</h2>
+      <p>Build an end-to-end inventory analytics workflow that answers: <em>What should we reorder?</em> <em>Where is cash tied up?</em> <em>What’s at risk?</em> and <em>Which suppliers drive or endanger availability?</em> The deliverable is a single-screen dashboard backed by pivot logic and clean Excel modeling.</p>
+
+      <h2>Dataset</h2>
+      <ul>
+        <li><strong>Source:</strong> Kaggle – <em>Grocery Inventory</em></li>
+        <li><strong>Key columns:</strong> Product_Name, Category, Supplier_Name, Warehouse_Location, Status, Product_ID, Supplier_ID, Date_Received, Last_Order_Date, Expiration_Date, Stock_Quantity, Reorder_Level, Reorder_Quantity, Unit_Price, Sales_Volume, Inventory_Turnover_Rate, percentage.</li>
+        <li><strong>Helper columns added:</strong> <em>Sales Value</em> = Sales_Volume × Unit_Price; <em>Inventory Value</em> = Stock_Quantity × Unit_Price.</li>
+      </ul>
+
+      <h2>Analysis & Methods</h2>
+      <ul>
+        <li><strong>Reorder Recommendations</strong> — 121 unique products; Different Product_ID's are different accross suppliers; Each Product_ID × Warehouse has distinct needs. Added <code>Reorder_Flag</code> (Stock_Quantity &lt; Reorder_Level) with conditional formatting.</li>
+        <li><strong>Stock Risk Analysis</strong> — Flagged <em>Deadstock</em> where Stock_Quantity ≥ Reorder_Level and Inventory_Turnover_Rate ≤ 5. Built pivots to aggregate <em>Stock at Risk (qty)</em> and <em>Value of Inventory</em> by Category/Supplier/Warehouse with drill-through.</li>
+        <li><strong>ABC Analysis</strong> — Ranked products by Sales Value, computed % of items, cumulative % revenue, and classified: A (≤80%), B (≤95%), C (&gt;95%). Delivered a Pareto chart and a summary table of item counts and revenue share by class.</li>
+        <li><strong>Inventory Valuation</strong> — Quantified cash tied up via <em>Inventory Value</em>. Pivots by Category, Supplier, and Warehouse; surfaced <em>Total Inventory Value</em>, Top-3 categories, top supplier, and <em>Deadstock value</em> &amp; %.</li>
+        <li><strong>Supplier Performance</strong> — Reliability and exposure: Top suppliers by Inventory and Sales Value; % Backordered and % Discontinued per supplier to spotlight risk and negotiate improvements.</li>
+      </ul>
+
+      <h2>Dashboard</h2>
+      <h3>KPIs:</h3>
+        <ul>
+        <li> Inventory Value </li>
+        <li> % Products to Reorder </li>
+        <li> % Deadstock </li>
+        <li> A-Class Revenue </li>
+        <li> Riskiest Supplier </li>
+        </ul>
+      <h3>Visuals:</h3>
+        <ul>
+        <li> Top-10 Riskiest Suppliers </li>
+        <li> Deadstock Value by Category </li>
+        <li> Revenue by Grade (A/B/C) </li>
+        <li> ABC Pareto </li>
+        <li> Riskiest Supplier </li>
+        <li> Inventory Value by Category </li>
+        </ul>
+
+      <h2>Key Insights</h2>
+      <ul>
+        <li>A-class items (≈20% of SKUs) contribute ≈80% of revenue — focus replenishment and service levels here.</li>
+        <li>Deadstock pockets cluster in specific categories/suppliers — discount or rationalize to free working capital.</li>
+        <li>Supplier reliability varies; a few vendors drive a disproportionate share of backorders/discontinuations.</li>
+        <li>Warehouse-level splits reveal where cash is concentrated and where stock health is weakest.</li>
+      </ul>
+
+      <h2>Impact</h2>
+      <ul>
+        <li>Actionable reorder list at the SKU × Warehouse grain reduces stockouts without over-ordering.</li>
+        <li>Visibility into at-risk and idle inventory helps reclaim capital and shelf space.</li>
+        <li>Supplier scorecards enable better contracts and escalation with data.</li>
+      </ul>
+
+      <h2>How I Built It</h2>
+      <ul>
+        <li>Power Query for cleaning/typing dates and merging files; Tables + structured refs; PivotTables &amp; PivotCharts; helper columns; conditional formatting; one-page dashboard layout with slicers (Category, Supplier, Warehouse, ABC, Status).</li>
+        <li>Design language: consistent color palette, KPI cards, Pareto cutoffs (80/95%), compact Top-N charts.</li>
+      </ul>
+
+      <h2>Potential Improvements</h2>
+      <ul>
+        <li>Simple demand forecasting (FORECAST.ETS) to make time-phased reorder suggestions.</li>
+        <li>Automated refresh via Power Query + OneDrive.</li>
+        <li>Supplier lead-time/OTIF tracking using Date_Received vs Last_Order_Date.</li>
+      </ul>
+
+      <!-- Links / Actions -->
+      <ul class="actions special">
+        <li><a href="https://www.kaggle.com/datasets/willianoliveiragibin/grocery-inventory" class="button" target="_blank" rel="noopener noreferrer">Dataset on Kaggle</a></li>
+        <li><a href="https://github.com/your-handle/grocery-inventory-excel" class="button" target="_blank" rel="noopener noreferrer">View on GitHub</a></li>
+      </ul>
+    </section>
+  </div>
+
+  <footer id="footer"></footer>
+
+  <!-- Back to Home -->
+  <header id="header">
+    <a href="index.html" class="logo">Back to Home</a>
+  </header>
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
